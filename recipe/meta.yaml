@@ -9,9 +9,14 @@ source:
   fn: python-graphviz-{{ version }}.zip
   url: https://pypi.io/packages/source/g/graphviz/graphviz-{{ version }}.zip
   sha256: {{ sha256 }}
+  patches:
+    # This is needed because Graphviz binaries (e.g. dot) are redefined as
+    # batch scripts in the Graphviz conda-forge package. Hence, it doesn't
+    # make sense to submit this patch upstream
+    - shell.patch
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:

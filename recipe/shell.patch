@@ -1,0 +1,12 @@
+--- graphviz/backend.py.old	Sun Feb 12 23:11:38 2017
++++ graphviz/backend.py	Sun Feb 12 23:12:46 2017
+@@ -120,7 +120,8 @@
+ 
+     try:
+         proc = subprocess.Popen(args, stdin=subprocess.PIPE,
+-            stdout=subprocess.PIPE, startupinfo=STARTUPINFO)
++            stdout=subprocess.PIPE, startupinfo=STARTUPINFO,
++            shell=(os.name == 'nt'))
+     except OSError as e:
+         if e.errno == errno.ENOENT:
+             raise RuntimeError('failed to execute %r, '
