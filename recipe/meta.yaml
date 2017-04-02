@@ -16,7 +16,7 @@ source:
     - shell.patch  # [win]
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -31,6 +31,8 @@ requirements:
 test:
   imports:
     - graphviz
+  requires:
+    - dask
 
 about:
   home: http://github.com/xflr6/graphviz
