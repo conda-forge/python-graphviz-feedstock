@@ -1,5 +1,5 @@
-{% set version = "0.5.2" %}
-{% set sha256 = "60ea67b383e3feb71fd0cb3137c02f8c4a76935996cf06a9e77d6150a90d034a" %}
+{% set version = "0.6" %}
+{% set sha256 = "b4be2b3438971588dc306116658f475916755ad8fcc0618e79023846ce94f97b" %}
 
 package:
   name: python-graphviz
