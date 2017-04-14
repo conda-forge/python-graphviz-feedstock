@@ -1,17 +1,22 @@
 {% set version = "0.6" %}
-{% set sha256 = "b4be2b3438971588dc306116658f475916755ad8fcc0618e79023846ce94f97b" %}
+{% set sha256 = "edcf3e908f0d873e569af593166416affa6e87e08bedb8bddca5f50fc9799f2f" %}
+{% set number = "1" %}
 
 package:
   name: python-graphviz
   version: {{ version }}
 
 source:
-  fn: python-graphviz-{{ version }}.zip
-  url: https://pypi.io/packages/source/g/graphviz/graphviz-{{ version }}.zip
+  fn: python-graphviz-{{ version }}.tar.gz
+  url: https://github.com/xflr6/graphviz/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    # needed due to the Windows batch script wrappers in conda-forge Graphviz
+    # see https://github.com/conda-forge/graphviz-feedstock/blob/bbfe3c7be2a448dd11db165a18c3edfd5ee6a95d/recipe/bld.bat#L27-L32
+    - windows-bat.patch
 
 build:
-  number: 0
+  number: {{ number }}
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -26,6 +31,8 @@ requirements:
 test:
   imports:
     - graphviz
+  requires:
+    - dask
 
 about:
   home: http://github.com/xflr6/graphviz
@@ -40,7 +47,7 @@ about:
   description: |
     This package facilitates the creation and rendering of graph
     descriptions in the DOT language of the Graphviz graph
-    drawing software (repo) from Python.
+    drawing software from Python.
 
 extra:
   recipe-maintainers:

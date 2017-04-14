@@ -1,0 +1,13 @@
+diff --git a/graphviz/backend.py b/graphviz/backend.py
+index 955551a..be35745 100644
+--- a/graphviz/backend.py
++++ b/graphviz/backend.py
+@@ -69,6 +69,8 @@ def command(engine, format, filepath=None):
+     if format not in FORMATS:
+         raise ValueError('unknown format: %r' % format)
+ 
++    if PLATFORM == 'windows':
++        engine = '%s.bat' % engine
+     args, rendered = [engine, '-T%s' % format], None
+     if filepath is not None:
+         args.extend(['-O', filepath])
