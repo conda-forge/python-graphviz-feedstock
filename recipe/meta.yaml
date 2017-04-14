@@ -1,4 +1,6 @@
 {% set version = "0.6" %}
+{% set sha256 = "edcf3e908f0d873e569af593166416affa6e87e08bedb8bddca5f50fc9799f2f" %}
+{% set number = "1" %}
 
 package:
   name: python-graphviz
@@ -7,14 +9,14 @@ package:
 source:
   fn: python-graphviz-{{ version }}.tar.gz
   url: https://github.com/xflr6/graphviz/archive/{{ version }}.tar.gz
-  sha256: edcf3e908f0d873e569af593166416affa6e87e08bedb8bddca5f50fc9799f2f
+  sha256: {{ sha256 }}
   patches:
     # needed due to the Windows batch script wrappers in conda-forge Graphviz
     # see https://github.com/conda-forge/graphviz-feedstock/blob/bbfe3c7be2a448dd11db165a18c3edfd5ee6a95d/recipe/bld.bat#L27-L32
     - windows-bat.patch
 
 build:
-  number: 1
+  number: {{ number }}
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
