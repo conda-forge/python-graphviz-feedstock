@@ -1,5 +1,5 @@
-{% set version = "0.6" %}
-{% set sha256 = "edcf3e908f0d873e569af593166416affa6e87e08bedb8bddca5f50fc9799f2f" %}
+{% set version = "0.7" %}
+{% set sha256 = "7c6a52eb06bdc2ddb914abf64b0c4b89af855400949d1c0e3cbf694564d2ce7f" %}
 {% set number = "1" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  fn: python-graphviz-{{ version }}.tar.gz
-  url: https://github.com/xflr6/graphviz/archive/{{ version }}.tar.gz
+  fn: python-graphviz-{{ version }}.zip
+  url: https://files.pythonhosted.org/packages/source/g/graphviz/graphviz-{{ version }}.zip
   sha256: {{ sha256 }}
   patches:
     # needed due to the Windows batch script wrappers in conda-forge Graphviz
@@ -35,8 +35,8 @@ test:
     - dask
 
 about:
-  home: http://github.com/xflr6/graphviz
-  doc_url: http://graphviz.readthedocs.io
+  home: https://github.com/xflr6/graphviz
+  doc_url: https://graphviz.readthedocs.io
   dev_url: https://github.com/xflr6/graphviz
 
   license: MIT
