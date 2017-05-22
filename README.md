@@ -1,7 +1,7 @@
 About python-graphviz
 =====================
 
-Home: http://github.com/xflr6/graphviz
+Home: https://github.com/xflr6/graphviz
 
 Package license: MIT
 
@@ -11,7 +11,7 @@ Summary: Simple Python interface for Graphviz
 
 This package facilitates the creation and rendering of graph
 descriptions in the DOT language of the Graphviz graph
-drawing software (repo) from Python.
+drawing software from Python.
 
 
 Current build status
