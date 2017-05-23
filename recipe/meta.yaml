@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  fn: graphviz-{{ version }}.zip
-  url: https://files.pythonhosted.org/packages/source/g/graphviz/graphviz-{{ version }}.zip
+  fn: python-graphviz-{{ version }}.zip
+  url: https://pypi.io/packages/source/g/graphviz/graphviz-{{ version }}.zip
   sha256: {{ sha256 }}
   patches:
     # needed due to the Windows batch script wrappers in conda-forge Graphviz
