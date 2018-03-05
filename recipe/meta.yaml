@@ -1,5 +1,5 @@
-{% set version = "0.8" %}
-{% set sha256 = "889c720d9955b804d56a8e842621558cbb5cbbdd93cbdf55862371311646e344" %}
+{% set version = "0.8.2" %}
+{% set sha256 = "606741c028acc54b1a065b33045f8c89ee0927ea77273ec409ac988f2c3d1091" %}
 {% set number = "0" %}
 
 package:
@@ -16,7 +16,7 @@ source:
     - windows-bat.patch  # [win]
 
 build:
-  number: {{ number }}
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
