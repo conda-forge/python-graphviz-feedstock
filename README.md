@@ -17,14 +17,16 @@ drawing software from Python.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/python-graphviz-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/python-graphviz-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/python-graphviz-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/python-graphviz-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/python-graphviz-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/python-graphviz-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/python-graphviz-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/python-graphviz-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/python-graphviz-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/python-graphviz-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/python-graphviz-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/python-graphviz-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/python-graphviz/badges/version.svg)](https://anaconda.org/conda-forge/python-graphviz)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/python-graphviz/badges/downloads.svg)](https://anaconda.org/conda-forge/python-graphviz)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-python--graphviz-green.svg)](https://anaconda.org/conda-forge/python-graphviz) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/python-graphviz.svg)](https://anaconda.org/conda-forge/python-graphviz) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/python-graphviz.svg)](https://anaconda.org/conda-forge/python-graphviz) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/python-graphviz.svg)](https://anaconda.org/conda-forge/python-graphviz) |
 
 Installing python-graphviz
 ==========================
