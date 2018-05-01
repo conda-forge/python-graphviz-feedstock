@@ -12,11 +12,10 @@ source:
   patches:
     # needed due to the Windows batch script wrappers in conda-forge Graphviz
     # see https://github.com/conda-forge/graphviz-feedstock/blob/bbfe3c7be2a448dd11db165a18c3edfd5ee6a95d/recipe/bld.bat#L27-L32
-    - windows-bat.patch
+    - windows-bat.patch  # [win]
 
 build:
   number: 0
-  noarch: python
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
