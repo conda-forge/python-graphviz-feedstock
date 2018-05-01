@@ -17,8 +17,9 @@ drawing software from Python.
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/python-graphviz-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/python-graphviz-feedstock)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/python-graphviz-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/python-graphviz-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/python-graphviz-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/python-graphviz-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/python-graphviz-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/python-graphviz-feedstock/branch/master)
 
 Current release info
 ====================
