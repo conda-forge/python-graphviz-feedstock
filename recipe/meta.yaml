@@ -1,5 +1,5 @@
-{% set version = "0.8.4" %}
-{% set sha256 = "4958a19cbd8461757a08db308a4a15c3d586660417e1e364f0107d2fe481689f" %}
+{% set version = "0.9" %}
+{% set sha256 = "865afa6ab9775cf29db03abd8e571a164042c726c35a1b3c1e2b8c4c645e2993" %}
 
 package:
   name: python-graphviz
@@ -15,7 +15,7 @@ source:
     - windows-bat.patch  # [win]
 
 build:
-  number: 2
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
