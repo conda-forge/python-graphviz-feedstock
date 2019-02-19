@@ -1,6 +1,6 @@
 --- graphviz/backend.py
 +++ graphviz/backend.py
-@@ -85,6 +85,8 @@ def command(engine, format, filepath=None):
+@@ -114,6 +114,8 @@ def command(engine, format, filepath=None):
      if format not in FORMATS:
          raise ValueError('unknown format: %r' % format)
  
