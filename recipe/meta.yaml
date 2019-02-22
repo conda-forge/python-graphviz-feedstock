@@ -12,7 +12,7 @@ source:
   patches:
     # needed due to the Windows batch script wrappers in conda-forge Graphviz
     # see https://github.com/conda-forge/graphviz-feedstock/blob/bbfe3c7be2a448dd11db165a18c3edfd5ee6a95d/recipe/bld.bat#L27-L32
-    - windows-bat.patch  # [win]
+    - windows-bat.patch
 
 build:
   number: 1002
