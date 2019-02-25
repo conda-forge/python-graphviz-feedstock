@@ -1,11 +1,11 @@
 --- graphviz/backend.py
 +++ graphviz/backend.py
-@@ -85,6 +85,8 @@ def command(engine, format, filepath=None):
-     if format not in FORMATS:
-         raise ValueError('unknown format: %r' % format)
- 
+@@ -114,6 +114,8 @@
+     suffix = '.'.join(reversed(format_arg))
+     format_arg = ':'.join(format_arg)
+
 +    if PLATFORM == 'windows':
 +        engine = '%s.bat' % engine
-     args, rendered = [engine, '-T%s' % format], None
+     cmd = [engine, '-T%s' % format_arg]
+     rendered = None
      if filepath is not None:
-         args.extend(['-O', filepath])
