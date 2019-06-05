@@ -9,8 +9,6 @@ source:
   fn: python-graphviz-{{ version }}.zip
   url: https://pypi.io/packages/source/g/graphviz/graphviz-{{ version }}.zip
   sha256: {{ sha256 }}
-  patches:
-    - windows-bat.patch
 
 build:
   number: 0
