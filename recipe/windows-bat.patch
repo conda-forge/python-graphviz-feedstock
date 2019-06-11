@@ -1,0 +1,11 @@
+--- graphviz/backend.py
++++ graphviz/backend.py
+@@ -110,6 +110,8 @@ def command(engine, format_, filepath=None, renderer=None, formatter=None):
+     if formatter is not None and formatter not in FORMATTERS:
+         raise ValueError('unknown formatter: %r' % formatter)
+ 
++    if PLATFORM == 'windows':
++        engine = '%s.bat' % engine
+     output_format = [f for f in (format_, renderer, formatter) if f is not None]
+     cmd = [engine, '-T%s' % ':'.join(output_format)]
+     rendered = None
