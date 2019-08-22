@@ -1,5 +1,5 @@
-{% set version = "0.11.1" %}
-{% set sha256 = "914b8b124942d82e3e1dcef499c9fe77c10acd3d18a1cfeeb2b9de05f6d24805" %}
+{% set version = "0.12" %}
+{% set sha256 = "c60e232a66e4847f9f644fbaa94730ca4f78385a1314a2cc1e7f4cb2d7461298" %}
 
 package:
   name: python-graphviz
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script:
     # Needed due to the Windows batch script wrappers in conda-forge Graphviz.
