@@ -5,7 +5,7 @@ Home: https://github.com/xflr6/graphviz
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Simple Python interface for Graphviz
 
