@@ -5,9 +5,13 @@ Home: https://github.com/xflr6/graphviz
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/python-graphviz-feedstock/blob/master/LICENSE.txt)
 
 Summary: Simple Python interface for Graphviz
+
+Development: https://github.com/xflr6/graphviz
+
+Documentation: https://graphviz.readthedocs.io
 
 This package facilitates the creation and rendering of graph
 descriptions in the DOT language of the Graphviz graph
