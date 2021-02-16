@@ -1,14 +1,12 @@
 {% set version = "0.16" %}
-{% set sha256 = "d2d25af1c199cad567ce4806f0449cb74eb30cf451fd7597251e1da099ac6e57" %}
 
 package:
   name: python-graphviz
   version: {{ version }}
 
 source:
-  fn: python-graphviz-{{ version }}.zip
   url: https://pypi.io/packages/source/g/graphviz/graphviz-{{ version }}.zip
-  sha256: {{ sha256 }}
+  sha256: d2d25af1c199cad567ce4806f0449cb74eb30cf451fd7597251e1da099ac6e57
 
 build:
   number: 2
@@ -17,13 +15,11 @@ build:
     - python -m pip install --no-deps --ignore-installed "${SRC_DIR}"
 
 requirements:
-  build:
-    - patch
   host:
-    - python
+    - python >=3
     - pip
   run:
-    - python
+    - python >=3
     - graphviz >=2.46.1
 
 test:
