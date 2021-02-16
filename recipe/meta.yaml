@@ -13,6 +13,8 @@ source:
 build:
   number: 2
   noarch: python
+  script:
+    - python -m pip install --no-deps --ignore-installed "${SRC_DIR}"
 
 requirements:
   build:
@@ -22,7 +24,7 @@ requirements:
     - pip
   run:
     - python
-    - graphviz
+    - graphviz>=2.46.1
 
 test:
   imports:
