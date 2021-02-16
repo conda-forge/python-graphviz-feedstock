@@ -11,18 +11,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   noarch: python
-  script:
-    # Needed due to the Windows batch script wrappers in conda-forge Graphviz.
-    # see https://github.com/conda-forge/graphviz-feedstock/blob/bbfe3c7be2a448dd11db165a18c3edfd5ee6a95d/recipe/bld.bat#L27-L32
-    # Must patch manually as the source code and patch are CRLF and conda-build
-    # tries to convert the patch to LF, which then won't apply.
-    - pushd "{{ RECIPE_DIR }}"
-    - cp windows-bat.patch "{{ SRC_DIR }}"
-    - popd
-    - patch --binary -p0 -i windows-bat.patch
-    - python -m pip install --no-deps --ignore-installed "${SRC_DIR}"
 
 requirements:
   build:
