@@ -1,38 +1,26 @@
 {% set version = "0.16" %}
-{% set sha256 = "d2d25af1c199cad567ce4806f0449cb74eb30cf451fd7597251e1da099ac6e57" %}
 
 package:
   name: python-graphviz
   version: {{ version }}
 
 source:
-  fn: python-graphviz-{{ version }}.zip
   url: https://pypi.io/packages/source/g/graphviz/graphviz-{{ version }}.zip
-  sha256: {{ sha256 }}
+  sha256: d2d25af1c199cad567ce4806f0449cb74eb30cf451fd7597251e1da099ac6e57
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script:
-    # Needed due to the Windows batch script wrappers in conda-forge Graphviz.
-    # see https://github.com/conda-forge/graphviz-feedstock/blob/bbfe3c7be2a448dd11db165a18c3edfd5ee6a95d/recipe/bld.bat#L27-L32
-    # Must patch manually as the source code and patch are CRLF and conda-build
-    # tries to convert the patch to LF, which then won't apply.
-    - pushd "{{ RECIPE_DIR }}"
-    - cp windows-bat.patch "{{ SRC_DIR }}"
-    - popd
-    - patch --binary -p0 -i windows-bat.patch
     - python -m pip install --no-deps --ignore-installed "${SRC_DIR}"
 
 requirements:
-  build:
-    - patch
   host:
-    - python
+    - python >=3
     - pip
   run:
-    - python
-    - graphviz
+    - python >=3
+    - graphviz >=2.46.1
 
 test:
   imports:
