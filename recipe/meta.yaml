@@ -1,4 +1,4 @@
-{% set version = "0.16" %}
+{% set version = "0.17" %}
 
 package:
   name: python-graphviz
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/g/graphviz/graphviz-{{ version }}.zip
-  sha256: d2d25af1c199cad567ce4806f0449cb74eb30cf451fd7597251e1da099ac6e57
+  sha256: ef6e2c5deb9cdcc0c7eece1d89625fd07b0f2208ea2bcb483520907ddf8b4e12
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script:
     - python -m pip install --no-deps --ignore-installed "${SRC_DIR}"
