@@ -27,6 +27,9 @@ test:
     - graphviz
   requires:
     - dask
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/xflr6/graphviz
