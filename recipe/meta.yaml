@@ -1,4 +1,4 @@
-{% set version = "0.18.2" %}
+{% set version = "0.19" %}
 
 package:
   name: python-graphviz
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/g/graphviz/graphviz-{{ version }}.zip
-  sha256: b876ad68bc7b441f05dee6b36cc338c6b95ddb4e523bb7313c9f3dfe56fc342a
+  sha256: b42554a1c47f24a9473b7f4e380d17b228586a067c97ea69d5354d6074be8dfd
 
 build:
   number: 0
