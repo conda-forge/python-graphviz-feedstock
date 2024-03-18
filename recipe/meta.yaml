@@ -9,17 +9,17 @@ source:
   sha256: d29ca3aadbe5d6e6c584045b7ec4fc1c15af2448dc1c0211b5e94344833243da
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:
     - python -m pip install --no-deps --ignore-installed "{{ SRC_DIR }}"
 
 requirements:
   host:
-    - python >=3
+    - python >=3.8
     - pip
   run:
-    - python >=3
+    - python >=3.8
     - graphviz >=2.46.1
 
 test:
